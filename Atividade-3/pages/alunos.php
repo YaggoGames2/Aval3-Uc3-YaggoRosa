@@ -7,9 +7,17 @@
     //notaFinal: 8.5
 //b-Calcule e exiba a média das notas de todos os alunos.
      
+$alunos = [["nome" => "Yaggo ", "idade " => 17, "notaFinal " => 9], ["nome" => "Sophia ", "idade " => 18, "notaFinal " => 10], ["nome" => "Felipe ", "idade " => 18, "notaFinal " => 7]];
 
-$alunos = ["nome " => " Arhur ", "Felipe", "Miguel"] . [];
+echo "<h3> Os 3 alunos <h3>";
 
-foreach ($moveis as $itens => $resposta) {
-    echo $itens . "=" . $resposta;
+foreach ($alunos as $aluno) {
+    echo "nome: {$aluno['nome']} <br>";
+    echo "idade: {$aluno['idade']} <br>";
+    echo "notaFinal: {$aluno['notaFinal']} <br><br>";
 }
+
+array_splice($alunos, count($alunos),  0,['nome' => 'Camila', 'idade' => 17, 'nota' => 10] );
+
+
+?>
