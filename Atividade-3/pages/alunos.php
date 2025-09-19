@@ -7,17 +7,37 @@
     //notaFinal: 8.5
 //b-Calcule e exiba a média das notas de todos os alunos.
      
-$alunos = [["nome" => "Yaggo ", "idade " => 17, "notaFinal " => 9], ["nome" => "Sophia ", "idade " => 18, "notaFinal " => 10], ["nome" => "Felipe ", "idade " => 18, "notaFinal " => 7]];
 
-echo "<h3> Os 3 alunos <h3>";
-
+$alunos = [
+    // os 3 alunos
+    ["nome" => "Yaggo", "idade" => 17, "notaFinal" => 9], 
+    ["nome" => "Sophia", "idade" => 18, "notaFinal" => 10],
+    ["nome" => "Felipe", "idade" => 18, "notaFinal" => 7],
+//os 10 alunos
+    ["nome" => "Ana", "idade" => 20, "notaFinal" => 6], 
+    ["nome" => "Carlos", "idade" => 23, "notaFinal" => 7], 
+    ["nome" => "Fernanda", "idade" => 21, "notaFinal" => 8], 
+    ["nome" => "Ricardo", "idade" => 26, "notaFinal" => 9],
+    ["nome" => "Joana", "idade" => 22, "notaFinal" => 2],
+    ["nome" => "Marcos", "idade" => 24, "notaFinal" => 8],
+    ["nome" => "Patrícia", "idade" => 23, "notaFinal" => 6],
+    ["nome" => "Felipe", "idade" => 25, "notaFinal" => 7],
+    ["nome" => "Bianca", "idade" => 20, "notaFinal" => 9],
+    ["nome" => "André", "idade" => 21, "notaFinal" => 8]
+];
+ 
+echo "Lista de Alunos:" . "<br>";
 foreach ($alunos as $aluno) {
-    echo "nome: {$aluno['nome']} <br>";
-    echo "idade: {$aluno['idade']} <br>";
-    echo "notaFinal: {$aluno['notaFinal']} <br><br>";
+    echo "Nome: " . $aluno['nome'] . ", ";
+    echo "Idade: " . $aluno['idade'] . "<br>";
+    echo "Nota Final: " . $aluno['notaFinal'] . "<br><br>";
 }
-
-array_splice($alunos, count($alunos),  0,['nome' => 'Camila', 'idade' => 17, 'nota' => 10] );
-
-
+ 
+$contaNotas = 0;
+foreach ($alunos as $aluno) {
+    $contaNotas += $aluno['notaFinal'];
+}
+ 
+$media = $contaNotas / count($alunos) ;
+echo "Média das notas: " . number_format($media, 2, "," ) ;
 ?>

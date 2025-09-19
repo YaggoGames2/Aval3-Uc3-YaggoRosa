@@ -12,17 +12,17 @@ $moveis = [[ "nome" => "TV", "preco" => 5600.00, "quantidade" => 8], ["nome" => 
 
 echo "<h3>Lista de Produtos:</h3>";
 foreach ($moveis as $movel) {
-    echo "Produto: {$movel['nome']} <br>";
+    echo "Produto: " . $movel['nome'] . "<br>";
     echo "Preço: R$ " . number_format($movel['preco'], 2, ",", ".") . "<br>";
-    echo "Qtd: {$movel['quantidade']} <br><br>";
+    echo "Qtd: " . $movel['quantidade'] . "<br><br>";
 }
  
 
 echo "<h3>Lista de Produtos com 10% de desconto:</h3>";
 foreach ($moveis as $movel) {
     $resultado = $movel['preco'] * 0.90; // desconto de 10%
-    echo "Produto: {$movel['nome']} <br>";
+    echo "Produto: ". $movel['nome'] . "<br>";
     echo "Preço: R$ " . number_format($resultado, 2, ",", ".") . "<br>";
-    echo "Qtd: {$movel['quantidade']} <br><br>";
+    echo "Qtd: ". $movel['quantidade'] . "<br><br>";
 }
 ?>
