@@ -30,7 +30,7 @@ echo "Lista de Alunos:" . "<br>";
 foreach ($alunos as $aluno) {
     echo "Nome: " . $aluno['nome'] . ", ";
     echo "Idade: " . $aluno['idade'] . "<br>";
-    echo "Nota Final: " . $aluno['notaFinal'] . "<br><br>";
+    echo "Nota Final: " . $aluno['notaFinal'] . "<p>";
 }
  
 $contaNotas = 0;
